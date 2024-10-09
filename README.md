@@ -75,9 +75,6 @@ The following operations can be performed on the database:
 - Retrieves product names and quantities for specific orders.
 - Retrieves all orders placed by a specific customer, including product IDs and quantities.
 
-## Testing
-
-For detailed information on the testing process for both systems, please refer to the [TestNotes.md](pgAdmin4Test/TestNotes.md) file located in the `pgAdmin4Test` folder. 
 
 ## License
 
