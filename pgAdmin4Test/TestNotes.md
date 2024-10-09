@@ -3,6 +3,7 @@
 These notes contain information about testing the code in both systems and explain the test process.
 
 The test software used for this will be **pgAdmin4**. A local server must be set up to properly run the test cases.
+![Example GIF](Example.gif)
 
 ## Problem 1: University Course Enrollment System
 
