@@ -13,8 +13,7 @@ This repository contains SQL scripts for two projects: a University Course Enrol
    - [Database Schema](#database-schema-1)
    - [Data Insertion](#data-insertion-1)
    - [SQL Queries](#sql-queries-1)
-4. [Testing](#testing)
-5. [License](#license)
+4. [License](#license)
 
 ## Project Overview
 
