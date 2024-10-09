@@ -1,31 +1,32 @@
--- Students table
+-- Create students table
 CREATE TABLE students (
     id SERIAL PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    email VARCHAR(100),
-    enrollment_date DATE
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    enrollment_date DATE NOT NULL
 );
 
--- Professors table
+-- Create professors table
 CREATE TABLE professors (
     id SERIAL PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    department VARCHAR(50)
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    department VARCHAR(50) NOT NULL
 );
--- Course table
+
+-- Create courses table
 CREATE TABLE courses (
     id SERIAL PRIMARY KEY,
-    course_name VARCHAR(100),
+    course_name VARCHAR(100) NOT NULL,
     course_description TEXT,
     professor_id INT REFERENCES professors(id)
 );
 
--- Enrollment table
+-- Create enrollments table
 CREATE TABLE enrollments (
-    student_id INTEGER,
-    course_id INTEGER,
-    enrollment_date DATE,
-   PRIMARY KEY (student_id, course_id)
+    student_id INTEGER REFERENCES students(id),
+    course_id INTEGER REFERENCES courses(id),
+    enrollment_date DATE NOT NULL,
+    PRIMARY KEY (student_id, course_id)
 );
